@@ -1,3 +1,4 @@
+
 function leastCommonMultiple(n1,n2) {
   
   let lar = Math.max(n1, n2);
