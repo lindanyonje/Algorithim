@@ -13,6 +13,6 @@ function leastCommonMultiple(n1,n2) {
   return i;
 }
 
-console.log(lcm(20, 15));
-console.log(lcm(5, 7));
+console.log(leastCommonMultiple(4, 6));
+
 
