@@ -1,25 +1,20 @@
 // program to check if the string is palindrome or not
 
-function checkPalindrome(str) {
+function Palindrome(str) {
 
-   
-    const len = string.length;
+    // convert string to an array
+    const arrayValues = str.split('');
 
-    // loop through half of the string
-    for (let i = 0; i < len / 2; i++) {
+    // reverse the array values
+    const reverseArrayValues = arrayValues.reverse();
 
-        // check if first and last string are same
-        if (string[i] !== string[len - 1 - i]) {
-            return 'False';
-        }
+    // convert array to string
+    const reverseString = reverseArrayValues.join('');
+
+    if(str == reverseString) {
+        return true;
     }
-    return 'True';
+    else {
+        return false;
+    }
 }
-
-// take input
-const string = prompt('Enter a string: ');
-
-// call the function
-const value = checkPalindrome(string);
-
-console.log(value);
