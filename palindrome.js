@@ -2,7 +2,7 @@
 
 function checkPalindrome(str) {
 
-    // find the length of a string
+   
     const len = string.length;
 
     // loop through half of the string
