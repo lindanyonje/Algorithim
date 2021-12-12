@@ -1,24 +1,20 @@
-function GenerateSieve(max)
-{
-    // Creating an array indicating whether numbers are prime.
-    const is_prime = new Array(max+1);
-
-    for(let i=2; n<=max; i++)
-    {
-        is_prime[i]=true;
-    }
-
-    //Crossing out multiplies
-    for(let i=2; n<=max; i++)
-    {
-        //Check if its prime
-        if(is_prime[i])
-        {
-            //Eliminate the multiplies of i
-            for(let j=i*2; j<=max; j+=i){
-                is_prime[j]=false;
-            }
+function isPrime(num) {
+    for ( var n = 2; n < num; n++ ) {
+        if ( num % n === 0 ) {
+            return false;
         }
     }
-    return is_prime;
+    return true;
 }
+
+function display(n) {
+    var arr = [2];
+    for ( var j = 3; j < n; j+=2 ) {
+        if ( isPrime(j) ) {
+            arr.push(j);
+        }
+    }
+  return arr;
+}
+
+display(100);
